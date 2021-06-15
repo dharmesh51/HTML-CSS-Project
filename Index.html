@@ -16,11 +16,29 @@
                 <img src="./assets/logo.png" alt="logo" class="navbar_logo">
             </div>
             <div class="navbar_nav_items">
-                <button class="nav_items button_primary">Order Food</button>
+                <div class="nav_item"> 
+                    <button class="button_primary hamburger_menu" id="hamburgermenu">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </button>
+                </div>
             </div>
         </nav>
+        <div class="mobile_navbar_items hamburger_menu_close">
+            <ul>
+                <li class="nav_item">Products</li>
+                <li class="nav_item">Restaurants</li>
+                <li class="nav_item">Pricing</li>
+                <li class="nav_item">About Us</li>
+            </ul>
+            <div class="nav_item">
+                <button class="button_primary">Order Food</button>
+            </div>
+        </div>
     </header>
     <main class="container">
+        <!-- hero section -->
         <section class="hero_container">
             <div class="hero_image_container">
                 <img src="./assets/hero.jpg" alt="Food Image" class="hero_image">
@@ -32,9 +50,10 @@
                 <button class="button_primary">Order Now</button>
             </div>
         </section>
+        <!-- food Menu Section -->
         <section class="food_list_container">
-            <h1 class="text_xl">Explore our Menu</h1>
             <div class="food_menu_diagonal_bg"></div>
+            <h1 class="text_xl">Explore our Menu</h1>
             <div class="food_list_menu">
                 <div class="food_menu_card">
                     <img src="./assets/burger.jpg" alt="Burger Img" class="food_menu_card_image">
@@ -43,14 +62,14 @@
                         <p class="text_list">Burger king, Mcdonalds, Burger Place <span style="color: red;"> +3</span></p>
                     </div>
                 </div>
-                <div class="food_menu_card">
+                <div class="food_menu_card pizza_card" >
                     <img src="./assets/pizza.jpg" alt="pizza Img" class="food_menu_card_image">
                     <div class="food_menu_card_details">
                         <h3 class="text_item"><strong>Pizza</strong></h3>
                         <p class="text_list"> Pizza Hut, La pino'z Pizza, Domino's Pizza<span style="color: red;"> +3</span></p>
                     </div>
                 </div>
-                <div class="food_menu_card">
+                <div class="food_menu_card ">
                     <img src="./assets/iceCream.jpg" alt="IceCream Img" class="food_menu_card_image">
                     <div class="food_menu_card_details">
                         <h3 class="text_item"><strong>Ice Creams</strong></h3>
@@ -62,6 +81,64 @@
                 <button class="button_primary" >View more</button>
             </div>
         </section>
+
+        <!-- Restaurant list Section -->
+        <section class="restaurants_list_container">
+            <div class="restaurants_list_text">
+                <h1 class="text_xl">Order from 100s of restauants</h1> 
+            </div>
+            <div class="restaurants_list_img_container">
+                <div class="restaurants_list_row-1">
+                    <img src="./assets/restaurant1.jpg" alt="restauants1" class="restaurants1">
+                    <img src="./assets/restaurant2.jpg" alt="restauants2" class="restaurants2">
+                </div>
+                <div class="restaurants_list_row-2">
+                    <img src="./assets/restaurant3.jpg" alt="restauants3" class="restaurants3">
+                    <img src="./assets/restaurant4.jpg" alt="restauants4" class="restaurants4">
+                </div>
+            </div>
+        </section>
+        <!-- Email field Section -->
+        <section class="email_field_container">
+            <div>
+                <h1 class="text_xl">Stay Updated</h1>
+                <div class="email_input_field">
+                    <div>
+                        <input type="email" placeholder="Enter email here" class="email_input">
+                    </div>
+                    <button class="button_primary"> Get  Updates</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quote  -->
+        <section class="quote_container">
+            <div class="quote_img_overlay"></div>
+            <h3 class="quote_img_text">
+                When a man's stomach is full it makes no difference whether he is rich or poor.
+            </h3>
+        </section>
     </main>
+    <footer>
+        <img src="./assets/logo.png" alt="logo" class="footer_logo">
+        <ul class="footer_list">
+            <li>Pricing</li>
+            <li>Terms and condition</li>
+            <li>Partnership</li>
+            <li>Career</li>
+            <li>Contact Us</li>
+        </ul>
+    </footer>
+    <script>
+        const hamburgermenu = document.getElementById('hamburgermenu');
+        const NavDropDown = document.querySelector(".mobile_navbar_items");
+        window.addEventListener("click", () => {
+            if (NavDropDown.classList.contains("hamburger_menu_close")) {
+                return NavDropDown.classList.remove("hamburger_menu_close");
+                
+            }
+            return NavDropDown.classList.add("hamburger_menu_close");
+        });
+    </script>
 </body>
 </html>
