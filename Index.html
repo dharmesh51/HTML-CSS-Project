@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato landing page</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar_brand">
+                <img src="./assets/logo.png" alt="logo" class="navbar_logo">
+            </div>
+            <div class="navbar_nav_items">
+                <button class="nav_items button_primary">Order Food</button>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="hero_container">
+            <div class="hero_image_container">
+                <img src="./assets/hero.jpg" alt="Food Image" class="hero_image">
+                <img src="./assets/heroShape.svg" alt="shape" class="hero_image_shape">
+                <img src="./assets/herobgpattren.svg" alt="Pattern" class="hero_image_pattern" >
+            </div>
+            <div class="hero_description">
+                <h1 class="hero_text">Order food from favourite restaurants near you.</h1>
+                <button class="button_primary">Order Now</button>
+            </div>
+        </section>
+        <section class="food_list_container">
+            <h1 class="text_xl">Explore our Menu</h1>
+            <div class="food_menu_diagonal_bg"></div>
+            <div class="food_list_menu">
+                <div class="food_menu_card">
+                    <img src="./assets/burger.jpg" alt="Burger Img" class="food_menu_card_image">
+                    <div class="food_menu_card_details">
+                        <h3 class="text_item"><strong>Burgers</strong></h3>
+                        <p class="text_list">Burger king, Mcdonalds, Burger Place <span style="color: red;"> +3</span></p>
+                    </div>
+                </div>
+                <div class="food_menu_card">
+                    <img src="./assets/pizza.jpg" alt="pizza Img" class="food_menu_card_image">
+                    <div class="food_menu_card_details">
+                        <h3 class="text_item"><strong>Pizza</strong></h3>
+                        <p class="text_list"> Pizza Hut, La pino'z Pizza, Domino's Pizza<span style="color: red;"> +3</span></p>
+                    </div>
+                </div>
+                <div class="food_menu_card">
+                    <img src="./assets/iceCream.jpg" alt="IceCream Img" class="food_menu_card_image">
+                    <div class="food_menu_card_details">
+                        <h3 class="text_item"><strong>Ice Creams</strong></h3>
+                        <p class="text_list">Baskin Robins, Ibaco, Amul<span style="color: red;"> +3</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="food_list_view_more">
+                <button class="button_primary" >View more</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
