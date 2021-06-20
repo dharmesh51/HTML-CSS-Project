@@ -12,30 +12,26 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="navbar_brand">
-                <img src="./assets/logo.png" alt="logo" class="navbar_logo">
-            </div>
-            <div class="navbar_nav_items">
-                <div class="nav_item"> 
-                    <button class="button_primary hamburger_menu" id="hamburgermenu">
+                <div class="navbar_brand">
+                    <img src="./assets/logo.png" alt="logo" class="navbar_logo">
+                </div>
+                <div class="navbar_nav_items">
+                    <button class="button_primary hamburger_menu " id="hamburgermenu">
                         <div></div>
                         <div></div>
                         <div></div>
                     </button>
                 </div>
-            </div>
+                <ul class="nav_ul" id="nav_ul_show">
+                    <li class="item">Products</li>
+                    <li class="item">Restaurants</li>
+                    <li class="item">Pricing</li>
+                    <li class="item">About Us</li>
+                    <div class="nav_item">
+                        <button class="button_primary nav_button">Order Food</button>
+                    </div>
+                </ul>
         </nav>
-        <div class="mobile_navbar_items hamburger_menu_close">
-            <ul>
-                <li class="nav_item">Products</li>
-                <li class="nav_item">Restaurants</li>
-                <li class="nav_item">Pricing</li>
-                <li class="nav_item">About Us</li>
-            </ul>
-            <div class="nav_item">
-                <button class="button_primary">Order Food</button>
-            </div>
-        </div>
     </header>
     <main class="container">
         <!-- hero section -->
@@ -130,14 +126,12 @@
         </ul>
     </footer>
     <script>
-        const hamburgermenu = document.getElementById('hamburgermenu');
-        const NavDropDown = document.querySelector(".mobile_navbar_items");
-        window.addEventListener("click", () => {
-            if (NavDropDown.classList.contains("hamburger_menu_close")) {
-                return NavDropDown.classList.remove("hamburger_menu_close");
-                
-            }
-            return NavDropDown.classList.add("hamburger_menu_close");
+        const hamburgermenu_var = document.getElementById('hamburgermenu');
+        const NavDropDown = document.getElementById('nav_ul_show'); 
+
+        hamburgermenu_var.addEventListener('click' , () => {
+            NavDropDown.classList.toggle('show');
+
         });
     </script>
 </body>

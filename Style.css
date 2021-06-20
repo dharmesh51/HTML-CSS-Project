@@ -22,6 +22,8 @@ ul{
 
 /*Custom*/
 
+/* CSS for Navbar */
+
 .button_primary{
     background: linear-gradient(to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);
     color: #fff;
@@ -41,6 +43,7 @@ ul{
 
 .navbar{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     background-color:#f9fafc;
     align-items: center;
@@ -58,24 +61,29 @@ ul{
     
 }
 
-.mobile_navbar_items{
-    background-color: #f9fafc;
-    padding: 1rem;
+.nav_ul{
+    display: none;
+    width: 100%;
+}
 
-}
-.mobile_navbar_items > ul > li {
-    margin: 20px 0;
-}
 .hamburger_menu > div{
     width: 35px;
     height: 5px;
     background-color: #f9fafc;
     margin: 6px 0 ;
 }
-.hamburger_menu_close{
-    display: none !important;
+
+.nav_ul.show{
+    display: flex;
+    flex-direction: column;
+    
+    padding-left: 1rem;
+}
+.nav_ul.show > li{
+    margin: 0.4rem 0;
 }
 
+/* CSS for hero image */
 
 .hero_container{
     width: 100%;
@@ -109,7 +117,7 @@ ul{
     color: #1d3557;
 }
 
-/*For Explore Menu*/
+/* CSS For Explore Menu*/
 
 .food_list_container{
     color: #1d3557;
@@ -155,7 +163,7 @@ ul{
     justify-content: center;
 }
 
-/* For Restaurants Image Part*/
+/* CSS For Restaurants Image Part*/
 
 .restaurants_list_container{
     margin-top: 3rem;
@@ -186,7 +194,7 @@ ul{
     border-radius: 4px;
 }
 
-/*For Email input field*/
+/* CSS For Email input field*/
 
 .email_field_container{
     width: 100%;
@@ -204,14 +212,14 @@ ul{
     background-color: #fcedf0;
     color: #1d3557;
     font-weight: 700;
-    padding: 0.2rem;
-    border-radius: 4px;
+    padding: 0.5rem;
+    border-radius: 5px;
 }
 .email_input::placeholder{
     color: #bdbcbc;
 }
 
-/*For Quote container*/
+/* CSS For Quote container*/
 .quote_container{
     position: relative;
     margin-top: 3rem;
@@ -239,25 +247,26 @@ ul{
     margin: 0 1rem;
     text-align: center;
 }
-/* For footer  */
+/* CSS For footer  */
 footer{
     margin-top: 3rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 1rem 1rem 0 0;
     background: linear-gradient(to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);
+    gap: 5px;
 
 }
 
 .footer_logo{
-    width: 300px;
+    width: 180px;
     filter: brightness(0) invert(1);
 }
 .footer_list{
-    margin-top: -1rem;
+    margin-top: 1rem;
     color: #fff;
+    font-weight: 700;
     
 }
 footer > ul > li {
@@ -305,6 +314,9 @@ footer > ul > li {
 }
 
 @media (min-width:768px) {
+    .nav_ul.show{
+        align-items: center;
+    }
     .hero_text{
         font-size: 1.875rem;
     }
@@ -354,10 +366,7 @@ footer > ul > li {
     .button_primary{
         box-shadow: none;
     }
-    .button_primary:hover{
-        background:#fff;
-        color:#dd2476 ;
-    }
+   
     .email_field_container{
         display: flex;
         justify-content: center;
@@ -368,8 +377,13 @@ footer > ul > li {
 
     footer{
         display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-around;
+    }
+    .footer_logo{
+        width: 250px;
+    }
+    .footer_list{
+        font-size: 1.5rem;
     }
     
 }
@@ -386,8 +400,38 @@ footer > ul > li {
     }
     .navbar{
         padding: 0 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
 
     }
+    .navbar_logo{
+        padding: 0;
+        width: 130%;
+        height: 110%;
+    }
+    .navbar_nav_items{
+        display: none ;
+    
+    }
+    .nav_ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 2.5rem;
+        color: #1d3557;
+        font-weight: 700;
+        font-size: 1.2rem;
+
+    }
+    .nav_ul > li:hover{
+        color: #ff512f;
+    }
+    .nav_button{
+        display: none;
+    }
+    
+    
     .hero_text{
         font-size: 3rem;
         line-height: 1;
